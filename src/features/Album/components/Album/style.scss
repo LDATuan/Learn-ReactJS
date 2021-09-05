@@ -1,0 +1,53 @@
+.album {
+  width: 280px;
+  height: 156px;
+  margin: 10px 16px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.2s linear;
+
+  position: relative;
+  &:hover > img {
+    transform: scale(1.15);
+  }
+
+  & > img {
+    width: inherit;
+    object-fit: cover;
+    border-radius: inherit;
+
+    transition: 0.25s linear;
+    // &:hover {
+    //   transform: scale(1.2);
+    // }
+  }
+  &__content {
+    // position: relative;
+
+    z-index: 1;
+    & > p {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      color: #fff;
+      font-weight: bold;
+      line-height: 1.5;
+      letter-spacing: 1px;
+    }
+  }
+  &__childImg {
+    position: absolute;
+    display: flex;
+    top: 60%;
+    left: 10%;
+    & > img {
+      object-fit: cover;
+      width: 50px;
+      height: 50px;
+      margin: 0 5px;
+      border-radius: 3px;
+    }
+  }
+}
